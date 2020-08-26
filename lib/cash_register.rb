@@ -23,7 +23,7 @@ binding.pry
     if @discount == 0
       return "There is no discount to apply."
     else
-      discount_decimal = @discount/ 100.0
+      discount_decimal = @discount / 100.0
       @total = @total * (1 - discount_decimal)
       return "After the discount, the total comes to $#{@total}"
     end
