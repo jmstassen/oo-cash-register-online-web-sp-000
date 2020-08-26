@@ -23,7 +23,8 @@ class CashRegister
       return "There is no discount to apply."
     else
       discount_decimal = @discount / 100.0
-      @total = @total * (1 - discount_decimal)
+      discount_amount = @total * discount_decimal
+      @total = @total - discount_amount
       return "After the discount, the total comes to $#{@total}"
     end
   end
