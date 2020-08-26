@@ -23,7 +23,7 @@ class CashRegister
     else
       discount_decimal = @discount / 100
       @total = @total * (1 - discount_decimal)
-      return "Success - new total is #{@total}"
+      return "After the discount, the total comes to $#{@total}"
     end
   end
 
