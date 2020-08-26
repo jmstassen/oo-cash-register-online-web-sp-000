@@ -21,7 +21,8 @@ class CashRegister
     if @discount = 0
       return "There is no discount to apply."
     else
-      @total = @total * (1-(@discount / 100))
+      discount_decimal = @discount / 100
+      @total = @total * (1 - discount_decimal)
       return "Success - new total is #{@total}"
     end
   end
